@@ -3,11 +3,73 @@
 <form class='generic-form'>
 	<fieldset>
 		<legend><i class='fa fa-book'></i> Identité et coordonnées</legend>
-
-		<label for='name'>Nom : </label>
-		<input id='name' type="text" name="name">
+		<ul>
+			<li>
+				<label for='name'>Nom : </label>
+				<input id='name' type="text" name="name">
+			</li>
+			<li>
+				<label for='lastName'>Prénom : </label>
+				<input id='lastName' type="text" name="lastName">
+			</li>
+			<li>
+				<label for='birthDate'>Date de naissance : </label>
+				<select id='birthDate' name='day'>
+					<?php for($i=1; $i<=31; $i++): ?>
+					<option><?= $i ?></option>
+					<?php endfor; ?>
+				</select> /
+				<select id='birthDate' name='month'>
+					<option>Janvier</option>
+					<option>Février</option>
+					<option>Mars</option>
+					<option>Avril</option>
+					<option>Mai</option>
+					<option>Juin</option>
+					<option>Juillet</option>
+					<option>Août</option>
+					<option>Septembre</option>
+					<option>Octobre</option>
+					<option>Novembre</option>
+					<option>Décembre</option>
+				</select> /
+				<select id='birthDate' name='year'>
+					<?php for($i=1960; $i<=2019; $i++): ?>
+					<option><?= $i ?></option>
+					<?php endfor; ?>
+				</select>
+			</li>
+			<li>
+				<label for='address'>Adresse : </label>
+				<textarea id='address' name='address' rows="4"></textarea>
+			</li>
+			<li>
+				<label for='city'>Ville : </label>
+				<input id='city' type="text" name="city">
+			</li>
+			<li>
+				<label for='postal'>Code Postal : </label>
+				<input id='postal' type="text" name="postal">
+			</li>
+			<li>
+				<label for='phone'>Téléphone : </label>
+				<input id='phone' type="tel" name="phone">
+			</li>
+		</ul>
 	</fieldset>
 	<fieldset>
-		<legend><i class='fa fa-lock'></i> Identité et coordonnées</legend>
+		<legend><i class='fa fa-lock'></i> Informations d'authenfication</legend>
+		<ul>
+			<li>
+				<label for='mail'>E-mail : </label>
+				<input id='mail' type="mail" name="mail">
+			</li>
+			<li>
+				<label for='pass'>Mot de passe : </label>
+				<input id='pass' type="password" name="pass">
+			</li>
+		</ul>
 	</fieldset>
+	<input type="submit" name="save" value="Creer le compte">
+	<input type="reset" name="reset" value="Annuler">
 </form>
