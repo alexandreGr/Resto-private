@@ -1,8 +1,6 @@
-<?php
-
-class HomeController
-{
-    public function httpGetMethod(Http $http, array $queryFields)
+<?php 
+class TestController{
+	public function httpGetMethod(Http $http, array $queryFields)
     {
     	/*
     	 * Méthode appelée en cas de requête HTTP GET
@@ -10,9 +8,9 @@ class HomeController
     	 * L'argument $http est un objet permettant de faire des redirections etc.
     	 * L'argument $queryFields contient l'équivalent de $_GET en PHP natif.
     	 */
-        $mealModel = new MealsModel();
-        $meals = $mealModel->listMeals();
-        return ['meals' => $meals];
+        $testModel = new TestModel();
+        $test = $testModel->listTest();
+        return ['test' => $test];
     }
 
     public function httpPostMethod(Http $http, array $formFields)

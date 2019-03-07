@@ -30,6 +30,7 @@ require_once 'library/InterceptingFilter.interface.php';
 
 $microKernel = new MicroKernel();
 $microKernel->bootstrap()->run(new FrontController());
+
 var_dump($microKernel);
 
 
@@ -51,6 +52,4 @@ var_dump($microKernel);
 // }
 // $getHttp = httpGetMethod(Http $http, array $queryFields);
 
-$test = new MealsModel();
-
-$test->listMeals();
+var_dump(new FrontController());

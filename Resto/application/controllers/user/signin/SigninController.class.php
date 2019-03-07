@@ -1,6 +1,6 @@
 <?php
 
-class HomeController
+class SigninController
 {
     public function httpGetMethod(Http $http, array $queryFields)
     {
@@ -10,9 +10,10 @@ class HomeController
     	 * L'argument $http est un objet permettant de faire des redirections etc.
     	 * L'argument $queryFields contient l'équivalent de $_GET en PHP natif.
     	 */
-        $mealModel = new MealsModel();
-        $meals = $mealModel->listMeals();
-        return ['meals' => $meals];
+        $signin = new SigninModel();
+     
+        
+
     }
 
     public function httpPostMethod(Http $http, array $formFields)
