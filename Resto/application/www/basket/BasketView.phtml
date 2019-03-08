@@ -7,22 +7,27 @@
 			<li>
 				<label for='nameProduct'>Nom : </label>
 				<select id='nameProduct' name='nameProduct'>
-					<option>Coca-cola</option>
+				<?php foreach($meals as $meal): ?>
+					<option value="<?= $meal['Name']; ?>" onclick='testValSelect(event); '><?= $meal['Name']; ?></option>
+				<?php endforeach; ?>
 				</select>
 			</li>
+			<fieldset>
+				<p>test</p>
+			</fieldset>
 			<li>
 				<label for='quantity'>Quantité : </label>
-				<input id='quantity' type="text" name="quantity">
+				<input class='quantity' id='quantity' type="text" name="quantity" value='1'>
 			</li>
 			<li>
-				<input class='button button-primary' type="submit" name="save" value="Creer le compte">
+				<button class='button button-primary' name="add" value="Ajouter" onclick='sendChoice(result);'>Ajouter</button>
 			</li>
 		</ul>
 	</fieldset>
 	<fieldset>
 		<legend>Récapitulatif de la commande</legend>
-		<p>Votre panier est vide</p>
+		<p class='recapOrder'>Votre panier est vide</p>
 	</fieldset>
-	<input class='button button-primary' type="submit" name="save" value="Creer le compte">
+	<input class='button button-primary' type="submit" name="save" value="Confirmer">
 	<input class='button button-cancel' type="reset" name="reset" value="Annuler">
 </form>

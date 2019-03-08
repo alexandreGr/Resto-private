@@ -8,7 +8,9 @@ class BasketController{
     	 * L'argument $http est un objet permettant de faire des redirections etc.
     	 * L'argument $queryFields contient l'équivalent de $_GET en PHP natif.
     	 */
-    	$basket = new BasketModel(); 
+        $mealModel = new MealsModel();
+        $meals = $mealModel->listMeals();
+        return ['meals' => $meals];
     }
 
     public function httpPostMethod(Http $http, array $formFields)

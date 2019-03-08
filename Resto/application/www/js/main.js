@@ -10,4 +10,16 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 // CODE PRINCIPAL                                                                      //
 /////////////////////////////////////////////////////////////////////////////////////////
+var result, resultOrder;
+function testValSelect(event) {
+	result = event.currentTarget.value;
+	console.log(result);
+	return result;
+}
 
+
+function sendChoice(result){
+	resultOrder = document.querySelector('#recapOrder');
+	console.log(resultOrder);
+	return result;
+}
