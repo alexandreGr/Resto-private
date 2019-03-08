@@ -1,6 +1,8 @@
-<?php 
-class SigninController{
-	public function httpGetMethod(Http $http, array $queryFields)
+<?php
+
+class SignupController
+{
+    public function httpGetMethod(Http $http, array $queryFields)
     {
     	/*
     	 * Méthode appelée en cas de requête HTTP GET
@@ -8,7 +10,10 @@ class SigninController{
     	 * L'argument $http est un objet permettant de faire des redirections etc.
     	 * L'argument $queryFields contient l'équivalent de $_GET en PHP natif.
     	 */
-        $signin = new SigninModel();    
+        $signup = new SignupModel();
+     
+        
+
     }
 
     public function httpPostMethod(Http $http, array $formFields)

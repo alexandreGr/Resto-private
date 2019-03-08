@@ -1,5 +1,5 @@
-<?php 
-class SigninController{
+<?php
+class BasketController{
 	public function httpGetMethod(Http $http, array $queryFields)
     {
     	/*
@@ -8,7 +8,7 @@ class SigninController{
     	 * L'argument $http est un objet permettant de faire des redirections etc.
     	 * L'argument $queryFields contient l'équivalent de $_GET en PHP natif.
     	 */
-        $signin = new SigninModel();    
+    	$basket = new BasketModel(); 
     }
 
     public function httpPostMethod(Http $http, array $formFields)

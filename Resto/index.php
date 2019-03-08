@@ -53,3 +53,5 @@ var_dump($microKernel);
 // $getHttp = httpGetMethod(Http $http, array $queryFields);
 
 var_dump(new FrontController());
+
+var_dump($_SERVER);
